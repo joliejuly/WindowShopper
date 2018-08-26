@@ -52,33 +52,45 @@
                                     <constraint firstItem="moR-RA-uC3" firstAttribute="height" secondItem="Lca-nP-oS5" secondAttribute="height" id="ZeE-1f-mJ0"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mb-C3-K6l">
-                                <rect key="frame" x="136" y="371" width="47" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeW-WJ-T31">
+                                <rect key="frame" x="20" y="324" width="280" height="54"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeW-WJ-T31">
-                                <rect key="frame" x="134" y="324" width="49" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFE-Uk-eOC">
+                                <rect key="frame" x="107.5" y="503" width="105" height="33"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Clear calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mb-C3-K6l">
+                                <rect key="frame" x="137.5" y="378" width="46.5" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DeW-WJ-T31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Bw-ko-bHo"/>
                             <constraint firstItem="WH2-jB-fWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="14X-U9-wFK"/>
                             <constraint firstItem="oA6-K6-C7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EN6-Eh-lYf"/>
+                            <constraint firstItem="2Mb-C3-K6l" firstAttribute="top" secondItem="DeW-WJ-T31" secondAttribute="bottom" id="F2L-5y-XVb"/>
+                            <constraint firstItem="2Mb-C3-K6l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HnF-e1-Sk8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WH2-jB-fWB" secondAttribute="trailing" constant="20" id="Ipu-wb-0fI"/>
                             <constraint firstItem="oA6-K6-C7w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tlm-1V-TA4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oA6-K6-C7w" secondAttribute="trailing" id="UUs-bC-MCd"/>
+                            <constraint firstItem="DeW-WJ-T31" firstAttribute="width" secondItem="moR-RA-uC3" secondAttribute="width" id="WEB-JM-sOF"/>
                             <constraint firstItem="WH2-jB-fWB" firstAttribute="top" secondItem="WDF-QF-PQZ" secondAttribute="bottom" constant="56" id="doD-zf-mim"/>
                             <constraint firstItem="WDF-QF-PQZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="fdD-FP-lw0"/>
                             <constraint firstItem="WH2-jB-fWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gdJ-mW-Djr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oA6-K6-C7w" secondAttribute="bottom" id="hxP-ZA-mRg"/>
+                            <constraint firstItem="DeW-WJ-T31" firstAttribute="top" secondItem="WH2-jB-fWB" secondAttribute="bottom" constant="45" id="m4k-ao-fGN"/>
+                            <constraint firstItem="WFE-Uk-eOC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qZV-kB-ifb"/>
                             <constraint firstItem="WDF-QF-PQZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rKb-DP-umq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WFE-Uk-eOC" secondAttribute="bottom" constant="32" id="y7K-HC-2VF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
