@@ -10,14 +10,19 @@ import UIKit
 
 class MainScreen: UIViewController {
 
+    @IBOutlet weak var wageTxt: CurrencyTextField!
+    @IBOutlet weak var priceTxt: CurrencyTextField!
+    @IBOutlet weak var quantityOfHoursLbl: UILabel!
+    @IBOutlet weak var hoursLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setUpCalculateView() {
+        
     }
 
 
