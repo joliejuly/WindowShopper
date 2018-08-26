@@ -17,7 +17,7 @@ class MainScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpCalculateView()
+        setUpViews()
     }
     
     @objc private func calculateBtnTapped() {
@@ -32,11 +32,40 @@ class MainScreen: UIViewController {
         quantityOfHoursLbl.isHidden = false
         hoursLbl.isHidden = false
         
-        let resultHours = String(Wage.getHours(forWage: wage, andPrice: price))
+        let resultHours = Wage.getHours(forWage: wage, andPrice: price)
+        let textsForLabels = getTextForResultLabels(for: resultHours)
+        quantityOfHoursLbl.text = textsForLabels.0
+        hoursLbl.text = textsForLabels.1
+    }
+    
+    private func getTextForResultLabels(for resultHours: Int) -> (String, String) {
         
-        quantityOfHoursLbl.text = resultHours
-        
-        resultHours.hasSuffix("1") ? (hoursLbl.text = "hour") : (hoursLbl.text = "hours")
+        var resultHoursText = String(resultHours)
+            if resultHours < 8 {
+                if resultHoursText.hasSuffix("1") {
+                  return (resultHoursText, "hour")
+                }
+                return (resultHoursText, "hours")
+            } else {
+                if resultHours % 8 == 0 {
+                    if resultHours == 8 {
+                        return ("1", "day")
+                    } else {
+                        let workdays = String(resultHours / 8)
+                        return (workdays, "days")
+                    }
+                } else {
+                
+                let remainder = resultHours % 8
+                let workdays = String(resultHours / 8)
+                resultHoursText = "\(workdays)"
+                var addInfo = workdays.hasSuffix("1") ? "day" : "days"
+                addInfo += " and \(remainder) "
+                "\(remainder)".hasSuffix("1") ? (addInfo += "hour") : (addInfo += "hours")
+                
+                return (resultHoursText, addInfo)
+            }
+        }
     }
     
     
@@ -51,6 +80,7 @@ class MainScreen: UIViewController {
     private func setUpViews() {
         quantityOfHoursLbl.isHidden = true
         hoursLbl.isHidden = true
+        setUpCalculateView()
     }
     
     private func setUpCalculateView() {
