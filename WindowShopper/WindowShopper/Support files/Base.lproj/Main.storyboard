@@ -28,13 +28,41 @@
                                     <constraint firstAttribute="height" constant="50" id="PtM-uj-vwy"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WH2-jB-fWB">
+                                <rect key="frame" x="20" y="159" width="280" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-nP-oS5" customClass="CurrencyTextField" customModule="WindowShopper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BBP-SO-DIK"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moR-RA-uC3" customClass="CurrencyTextField" customModule="WindowShopper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="280" height="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="moR-RA-uC3" firstAttribute="width" secondItem="Lca-nP-oS5" secondAttribute="width" id="YdA-Ik-U6B"/>
+                                    <constraint firstItem="moR-RA-uC3" firstAttribute="height" secondItem="Lca-nP-oS5" secondAttribute="height" id="ZeE-1f-mJ0"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WH2-jB-fWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="14X-U9-wFK"/>
                             <constraint firstItem="oA6-K6-C7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EN6-Eh-lYf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WH2-jB-fWB" secondAttribute="trailing" constant="20" id="Ipu-wb-0fI"/>
                             <constraint firstItem="oA6-K6-C7w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tlm-1V-TA4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oA6-K6-C7w" secondAttribute="trailing" id="UUs-bC-MCd"/>
+                            <constraint firstItem="WH2-jB-fWB" firstAttribute="top" secondItem="WDF-QF-PQZ" secondAttribute="bottom" constant="56" id="doD-zf-mim"/>
                             <constraint firstItem="WDF-QF-PQZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="fdD-FP-lw0"/>
+                            <constraint firstItem="WH2-jB-fWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gdJ-mW-Djr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oA6-K6-C7w" secondAttribute="bottom" id="hxP-ZA-mRg"/>
                             <constraint firstItem="WDF-QF-PQZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rKb-DP-umq"/>
                         </constraints>
